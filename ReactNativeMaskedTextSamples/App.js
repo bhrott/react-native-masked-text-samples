@@ -1,14 +1,32 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 
 import Cpf from './Samples/Cpf'
+import CreditCard from './Samples/CreditCard'
+import Cnpj from './Samples/Cnpj'
+import CelPhone from './Samples/CelPhone'
+import Custom from './Samples/Custom'
+import Datetime from './Samples/Datetime'
+import Money from './Samples/Money'
+import OnlyNumbers from './Samples/OnlyNumbers'
+import ZipCode from './Samples/ZipCode'
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Cpf />
-      </View>
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.container}>
+          <Cpf />
+          <Cnpj />
+          <CreditCard />
+          <CelPhone />
+          <Custom />
+          <Datetime />
+          <Money />
+          <OnlyNumbers />
+          <ZipCode />
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -19,6 +37,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+    paddingTop: 30
   },
+  scrollView: {
+    flex: 1
+  }
 });

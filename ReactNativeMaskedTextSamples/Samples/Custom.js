@@ -9,20 +9,23 @@ export default class MyScreen extends React.Component {
     super(props)
 
     this.state = {
-      cpf: ''
+      text: ''
     }
   }
 
   render() {
     return (
       <View style={container}>
-        <Text>CPF</Text>
+        <Text>Custom: 999 AAA SSS ***</Text>
         <TextInputMask
-          type={'cpf'}
-          value={this.state.cpf}
+          type={'custom'}
+          options={{
+            mask: '999 AAA SSS ***'
+          }}
+          value={this.state.text}
           onChangeText={text => {
             this.setState({
-              cpf: text
+              text: text
             })
           }}
           style={textInputStype}

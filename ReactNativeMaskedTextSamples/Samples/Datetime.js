@@ -9,20 +9,23 @@ export default class MyScreen extends React.Component {
     super(props)
 
     this.state = {
-      cpf: ''
+      dt: ''
     }
   }
 
   render() {
     return (
       <View style={container}>
-        <Text>CPF</Text>
+        <Text>Datetime</Text>
         <TextInputMask
-          type={'cpf'}
-          value={this.state.cpf}
+          type={'datetime'}
+          options={{
+            format: 'YYYY/MM/DD'
+          }}
+          value={this.state.dt}
           onChangeText={text => {
             this.setState({
-              cpf: text
+              dt: text
             })
           }}
           style={textInputStype}
