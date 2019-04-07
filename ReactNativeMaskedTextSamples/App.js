@@ -10,6 +10,7 @@ import Datetime from './Samples/Datetime'
 import Money from './Samples/Money'
 import OnlyNumbers from './Samples/OnlyNumbers'
 import ZipCode from './Samples/ZipCode'
+import WithRawValueInChangeText from './Samples/WithRawValueInChangeText'
 
 export default class App extends React.Component {
   render() {
@@ -25,6 +26,7 @@ export default class App extends React.Component {
           <Money />
           <OnlyNumbers />
           <ZipCode />
+          <WithRawValueInChangeText />
         </View>
       </ScrollView>
     );
@@ -38,7 +40,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 10,
-    paddingTop: 30
+    paddingTop: 30,
+    paddingBottom: 50
   },
   scrollView: {
     flex: 1

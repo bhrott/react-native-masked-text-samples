@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import { TextInputMask } from 'react-native-masked-text'
+import TextInputMask from '../lib/text-input-mask'
 
 import { textInputStype, container } from './styles'
 
-export default class MyScreen extends React.Component {
+export default class CelPhone extends React.Component {
   constructor(props) {
     super(props)
 

@@ -4,32 +4,34 @@ import TextInputMask from '../lib/text-input-mask'
 
 import { textInputStype, container } from './styles'
 
-export default class Datetime extends React.Component {
+export default class WithRawValueInChangeText extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      dt: ''
+      value: '',
+      raw: ''
     }
   }
 
   render() {
     return (
       <View style={container}>
-        <Text>Datetime</Text>
+        <Text>With raw value in change text</Text>
         <TextInputMask
-          type={'datetime'}
-          options={{
-            format: 'YYYY/MM/DD'
-          }}
-          value={this.state.dt}
-          onChangeText={text => {
+          type={'cpf'}
+          value={this.state.value}
+          includeRawValueInChangeText={true}
+          onChangeText={(text, rawValue) => {
             this.setState({
-              dt: text
+              value: text,
+              raw: rawValue
             })
           }}
           style={textInputStype}
         />
+        <Text>Value: {this.state.value}</Text>
+        <Text>Raw: {this.state.raw}</Text>
       </View>
     )
   }
