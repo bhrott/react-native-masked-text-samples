@@ -10,7 +10,8 @@ export default class Custom extends React.Component {
 
     this.state = {
       custom1: '',
-      custom2: ''
+      custom2: '',
+      custom3: ''
     }
   }
 
@@ -44,6 +45,23 @@ export default class Custom extends React.Component {
             onChangeText={text => {
               this.setState({
                 custom2: text
+              })
+            }}
+            style={textInputStype}
+          />
+        </View>
+        <View style={container}>
+          <Text>Custom: AA-99-99-99-A</Text>
+          <TextInputMask
+            id='custom-AA-99-99-99-A'
+            type={'custom'}
+            options={{
+              mask: 'AA-99-99-99-A'
+            }}
+            value={this.state.custom3}
+            onChangeText={text => {
+              this.setState({
+                custom3: text
               })
             }}
             style={textInputStype}
