@@ -15,8 +15,8 @@ export default class TextInputMask extends BaseTextComponent {
         const { maskedText, rawText } = this.updateValue(text)
 
         if (this.props.onChangeText) {
-            this._trySetNativeProps(maskedText)
             this.props.onChangeText(maskedText, rawText)
+            this._trySetNativeProps(maskedText)
         }
     }
 

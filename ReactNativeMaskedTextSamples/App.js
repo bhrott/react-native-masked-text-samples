@@ -11,6 +11,7 @@ import Money from './Samples/Money'
 import OnlyNumbers from './Samples/OnlyNumbers'
 import ZipCode from './Samples/ZipCode'
 import WithRawValueInChangeText from './Samples/WithRawValueInChangeText'
+import FocusingNextInput from './Samples/FocusingNextInput'
 
 export default class App extends React.Component {
   render() {
@@ -27,6 +28,7 @@ export default class App extends React.Component {
           <OnlyNumbers />
           <ZipCode />
           <WithRawValueInChangeText />
+          <FocusingNextInput />
         </View>
       </ScrollView>
     );
