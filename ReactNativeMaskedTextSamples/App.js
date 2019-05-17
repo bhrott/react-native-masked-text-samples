@@ -12,6 +12,7 @@ import OnlyNumbers from './Samples/OnlyNumbers'
 import ZipCode from './Samples/ZipCode'
 import WithRawValueInChangeText from './Samples/WithRawValueInChangeText'
 import FocusingNextInput from './Samples/FocusingNextInput'
+import WithInitialValue from './Samples/WithInitialValue'
 
 export default class App extends React.Component {
   render() {
@@ -29,6 +30,7 @@ export default class App extends React.Component {
           <ZipCode />
           <WithRawValueInChangeText />
           <FocusingNextInput />
+          <WithInitialValue />
         </View>
       </ScrollView>
     );
